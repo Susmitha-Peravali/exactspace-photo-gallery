@@ -1,0 +1,111 @@
+:root {
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  
+  /* Deep Midnight Navy & Charcoal Base (Default / Dark) */
+  --bg-app: #070a13;
+  --bg-header: linear-gradient(180deg, rgba(11, 16, 29, 0.95) 0%, rgba(7, 10, 19, 0.85) 100%);
+  --bg-card: rgba(14, 20, 36, 0.82);
+  --bg-subtle: rgba(22, 32, 54, 0.65);
+  --bg-overlay: rgba(4, 7, 15, 0.88);
+  
+  /* Text */
+  --text-main: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  
+  /* Borders */
+  --border-card: rgba(56, 189, 248, 0.14);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  
+  /* Accents - Electric Blue & Vivid Cyan */
+  --primary-blue: #38bdf8;
+  --primary-blue-hover: #0284c7;
+  --primary-blue-light: rgba(56, 189, 248, 0.12);
+  --primary-blue-border: rgba(56, 189, 248, 0.35);
+  --accent-cyan: #06b6d4;
+  --accent-glow: rgba(56, 189, 248, 0.22);
+  
+  /* Radii */
+  --radius-xl: 20px;
+  --radius-card: 16px;
+  --radius-pill: 9999px;
+  --radius-sm: 8px;
+  
+  /* Shadows */
+  --shadow-subtle: 0 2px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 16px 36px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(56, 189, 248, 0.08);
+  --shadow-hover: 0 28px 50px -10px rgba(0, 0, 0, 0.8), 0 0 24px -2px rgba(56, 189, 248, 0.2);
+  --shadow-fab: 0 10px 25px -3px rgba(56, 189, 248, 0.4);
+}
+
+[data-theme="light"] {
+  --bg-app: #f4f7fb;
+  --bg-header: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(244, 247, 251, 0.9) 100%);
+  --bg-card: rgba(255, 255, 255, 0.92);
+  --bg-subtle: #edf2f7;
+  --bg-overlay: rgba(15, 23, 42, 0.7);
+  
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  
+  --border-card: rgba(203, 213, 225, 0.7);
+  --border-subtle: #f1f5f9;
+  
+  --primary-blue: #0284c7;
+  --primary-blue-hover: #0369a1;
+  --primary-blue-light: #f0f9ff;
+  --primary-blue-border: #bae6fd;
+  --accent-cyan: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.15);
+  
+  --shadow-card: 0 10px 30px -4px rgba(15, 23, 42, 0.08), 0 0 0 1px rgba(226, 232, 240, 0.8);
+  --shadow-hover: 0 24px 44px -8px rgba(15, 23, 42, 0.15), 0 0 20px -2px rgba(2, 132, 199, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--primary-blue-border);
+  outline-offset: 3px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
